@@ -12,7 +12,35 @@
 		696C02761DE10A3900AE969F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696C02741DE10A3900AE969F /* Main.storyboard */; };
 		696C02781DE10A3900AE969F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696C02771DE10A3900AE969F /* Assets.xcassets */; };
 		696C027B1DE10A3900AE969F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696C02791DE10A3900AE969F /* LaunchScreen.storyboard */; };
+		696C028B1DE10D9500AE969F /* AutomaticSigningCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 696C02891DE10D9500AE969F /* AutomaticSigningCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		696C028E1DE10D9500AE969F /* AutomaticSigningCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696C02871DE10D9500AE969F /* AutomaticSigningCore.framework */; };
+		696C028F1DE10D9500AE969F /* AutomaticSigningCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 696C02871DE10D9500AE969F /* AutomaticSigningCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		696C02951DE10DD500AE969F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C02941DE10DD500AE969F /* Test.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		696C028C1DE10D9500AE969F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 696C02651DE10A3900AE969F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 696C02861DE10D9500AE969F;
+			remoteInfo = AutomaticSigningCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		696C02931DE10D9500AE969F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				696C028F1DE10D9500AE969F /* AutomaticSigningCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		696C026D1DE10A3900AE969F /* AutomaticSigning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomaticSigning.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +50,22 @@
 		696C02771DE10A3900AE969F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696C027A1DE10A3900AE969F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696C027C1DE10A3900AE969F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696C02871DE10D9500AE969F /* AutomaticSigningCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutomaticSigningCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		696C02891DE10D9500AE969F /* AutomaticSigningCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutomaticSigningCore.h; sourceTree = "<group>"; };
+		696C028A1DE10D9500AE969F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696C02941DE10DD500AE969F /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		696C026A1DE10A3900AE969F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696C028E1DE10D9500AE969F /* AutomaticSigningCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		696C02831DE10D9500AE969F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				696C026F1DE10A3900AE969F /* AutomaticSigning */,
+				696C02881DE10D9500AE969F /* AutomaticSigningCore */,
 				696C026E1DE10A3900AE969F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				696C026D1DE10A3900AE969F /* AutomaticSigning.app */,
+				696C02871DE10D9500AE969F /* AutomaticSigningCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +106,28 @@
 			path = AutomaticSigning;
 			sourceTree = "<group>";
 		};
+		696C02881DE10D9500AE969F /* AutomaticSigningCore */ = {
+			isa = PBXGroup;
+			children = (
+				696C02891DE10D9500AE969F /* AutomaticSigningCore.h */,
+				696C028A1DE10D9500AE969F /* Info.plist */,
+				696C02941DE10DD500AE969F /* Test.swift */,
+			);
+			path = AutomaticSigningCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		696C02841DE10D9500AE969F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696C028B1DE10D9500AE969F /* AutomaticSigningCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		696C026C1DE10A3900AE969F /* AutomaticSigning */ = {
@@ -74,15 +137,35 @@
 				696C02691DE10A3900AE969F /* Sources */,
 				696C026A1DE10A3900AE969F /* Frameworks */,
 				696C026B1DE10A3900AE969F /* Resources */,
+				696C02931DE10D9500AE969F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				696C028D1DE10D9500AE969F /* PBXTargetDependency */,
 			);
 			name = AutomaticSigning;
 			productName = AutomaticSigning;
 			productReference = 696C026D1DE10A3900AE969F /* AutomaticSigning.app */;
 			productType = "com.apple.product-type.application";
+		};
+		696C02861DE10D9500AE969F /* AutomaticSigningCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 696C02921DE10D9500AE969F /* Build configuration list for PBXNativeTarget "AutomaticSigningCore" */;
+			buildPhases = (
+				696C02821DE10D9500AE969F /* Sources */,
+				696C02831DE10D9500AE969F /* Frameworks */,
+				696C02841DE10D9500AE969F /* Headers */,
+				696C02851DE10D9500AE969F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutomaticSigningCore;
+			productName = AutomaticSigningCore;
+			productReference = 696C02871DE10D9500AE969F /* AutomaticSigningCore.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,7 +179,13 @@
 				TargetAttributes = {
 					696C026C1DE10A3900AE969F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = K75LS2P7G7;
+						DevelopmentTeam = Y757T9GB83;
+						ProvisioningStyle = Automatic;
+					};
+					696C02861DE10D9500AE969F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y757T9GB83;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -115,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				696C026C1DE10A3900AE969F /* AutomaticSigning */,
+				696C02861DE10D9500AE969F /* AutomaticSigningCore */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +220,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		696C02851DE10D9500AE969F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,7 +239,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		696C02821DE10D9500AE969F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696C02951DE10DD500AE969F /* Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		696C028D1DE10D9500AE969F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 696C02861DE10D9500AE969F /* AutomaticSigningCore */;
+			targetProxy = 696C028C1DE10D9500AE969F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		696C02741DE10A3900AE969F /* Main.storyboard */ = {
@@ -258,8 +371,9 @@
 		696C02801DE10A3900AE969F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K75LS2P7G7;
+				DEVELOPMENT_TEAM = Y757T9GB83;
 				INFOPLIST_FILE = AutomaticSigning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.AutomaticSigning;
@@ -271,13 +385,63 @@
 		696C02811DE10A3900AE969F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K75LS2P7G7;
+				DEVELOPMENT_TEAM = Y757T9GB83;
 				INFOPLIST_FILE = AutomaticSigning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.AutomaticSigning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		696C02901DE10D9500AE969F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y757T9GB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AutomaticSigningCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.AutomaticSigningCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		696C02911DE10D9500AE969F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y757T9GB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AutomaticSigningCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.AutomaticSigningCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -298,6 +462,15 @@
 			buildConfigurations = (
 				696C02801DE10A3900AE969F /* Debug */,
 				696C02811DE10A3900AE969F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		696C02921DE10D9500AE969F /* Build configuration list for PBXNativeTarget "AutomaticSigningCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696C02901DE10D9500AE969F /* Debug */,
+				696C02911DE10D9500AE969F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
