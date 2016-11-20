@@ -1,0 +1,15 @@
+# This is the minimum version number required.
+fastlane_version "1.110.0"
+
+default_platform :ios
+
+platform :ios do
+
+  desc "Build an adhoc distribution version"
+  desc "This will also make sure the profile is up to date"
+  lane :adhoc do
+    sigh(adhoc: true)
+    gym(scheme: 'AutomaticSigning')
+  end
+
+end
