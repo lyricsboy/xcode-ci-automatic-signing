@@ -8,11 +8,15 @@ platform :ios do
   desc "Build an adhoc distribution version"
   desc "This will also make sure the profile is up to date"
   lane :adhoc do
+    xcargs = {}
     if is_ci?
       cert(keychain_path: 'travis.keychain', keychain_password: 'travis')
-      sigh(adhoc: true)
+      profile_uuid = sigh(adhoc: true)
+      xcargs = {
+        'PROVISIONING_PROFILE_app' => profile_uuid
+      }
     end
-    gym(scheme: 'AutomaticSigning')
+    gym(scheme: 'AutomaticSigning', xcargs: xcargs)
   end
 
 end
