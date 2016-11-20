@@ -376,7 +376,7 @@
 				DEVELOPMENT_TEAM = Y757T9GB83;
 				INFOPLIST_FILE = AutomaticSigning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.AutomaticSigning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.Autosign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -390,7 +390,7 @@
 				DEVELOPMENT_TEAM = Y757T9GB83;
 				INFOPLIST_FILE = AutomaticSigning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.AutomaticSigning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ponystyle.Autosign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -473,6 +473,7 @@
 				696C02911DE10D9500AE969F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
