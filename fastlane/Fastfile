@@ -8,7 +8,10 @@ platform :ios do
   desc "Build an adhoc distribution version"
   desc "This will also make sure the profile is up to date"
   lane :adhoc do
-    sigh(adhoc: true)
+    if is_ci?
+      cert(keychain_path: 'travis.keychain', keychain_password: 'travis')
+      sigh(adhoc: true)
+    end
     gym(scheme: 'AutomaticSigning')
   end
 
