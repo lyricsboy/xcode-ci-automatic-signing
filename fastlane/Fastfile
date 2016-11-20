@@ -11,9 +11,9 @@ platform :ios do
     xcargs = {}
     if is_ci?
       # import the private key
-      FastlaneCore::KeychainImporter.import_file('travis_key.p12', 'travis.keychain', 
+      FastlaneCore::KeychainImporter.import_file('../travis_key.p12', '../travis.keychain', 
         keychain_password: 'travis', certificate_password: ENV['TRAVIS_KEY_PASSWORD'])
-      cert(keychain_path: 'travis.keychain', keychain_password: 'travis')
+      cert(keychain_path: '../travis.keychain', keychain_password: 'travis')
       profile_uuid = sigh(adhoc: true)
       xcargs = {
         'PROVISIONING_PROFILE_app' => profile_uuid
