@@ -1,10 +1,13 @@
 language: generic
 os: osx
 osx_image: xcode8.1
-before_install:
-- bundle install
-- scripts/travis_keychain_setup.sh
+install:
+  - bundle install
+before_script:
+  - scripts/travis_keychain_setup.sh
 script: fastlane ios adhoc
+after_failure:
+  - cat $HOME/Library/Logs/gym/*.log
 env:
   global:
   # FASTLANE_USER
