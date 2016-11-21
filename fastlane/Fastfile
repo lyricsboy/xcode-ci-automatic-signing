@@ -11,7 +11,9 @@ platform :ios do
     xcargs = {}
     if is_ci?
       # import the private key
-      FastlaneCore::KeychainImporter.import_file('../travis_signing_assets.p12', 'travis.keychain', 
+      signing_assets = File.join(ENV['TRAVIS_BUILD_DIR'], 'travis_signing_assets.p12')
+      keychain = File.join(ENV['TRAVIS_BUILD_DIR'], 'travis.keychain')
+      FastlaneCore::KeychainImporter.import_file(signing_assets, keychain, 
         keychain_password: 'travis', certificate_password: ENV['TRAVIS_KEY_PASSWORD'])
       profile_uuid = sigh(adhoc: true)
       xcargs = {
