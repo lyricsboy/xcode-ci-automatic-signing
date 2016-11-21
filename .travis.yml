@@ -4,7 +4,7 @@ osx_image: xcode8.1
 before_install:
 - bundle install
 - scripts/travis_keychain_setup.sh
-script: fastlane ios adhoc
+script: fastlane --verbose ios adhoc
 env:
   global:
   # FASTLANE_USER
