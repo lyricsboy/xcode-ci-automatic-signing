@@ -20,7 +20,8 @@ platform :ios do
         'PROVISIONING_PROFILE_app' => profile_uuid
       }
     end
-    gym(scheme: 'AutomaticSigning', xcargs: xcargs)
+    xcargs_string = xcargs.map { |key, value| "#{key}='#{value}'" }.join(" ")
+    gym(scheme: 'AutomaticSigning', xcargs: xcargs_string)
   end
 
 end
