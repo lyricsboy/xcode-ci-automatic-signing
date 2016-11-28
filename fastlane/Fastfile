@@ -3,6 +3,16 @@ fastlane_version "1.110.0"
 
 default_platform :ios
 
+# Switch ProvisioningStyle to Manual for all targets in the given project
+def enable_manual_provisioning(project_file)
+  UI.important "Switching ProvisioningStyle to Manual."
+  fastlane_require 'xcodeproj'
+  project = Xcodeproj::Project.open(project_file)
+  target_attributes = project.root_object.attributes["TargetAttributes"]
+  target_attributes.each { |id, attrs| attrs["ProvisioningStyle"] = 'Manual' }
+  project.save
+end
+
 platform :ios do
 
   desc "Build an adhoc distribution version"
@@ -19,6 +29,7 @@ platform :ios do
       xcargs = {
         'PROVISIONING_PROFILE_app' => profile_uuid
       }
+      enable_manual_provisioning('../AutomaticSigning.xcodeproj')
     end
     xcargs_string = xcargs.map { |key, value| "#{key}='#{value}'" }.join(" ")
     gym(scheme: 'AutomaticSigning', codesigning_identity: 'iPhone Distribution: Brian Hardy (Y757T9GB83)', xcargs: xcargs_string)
